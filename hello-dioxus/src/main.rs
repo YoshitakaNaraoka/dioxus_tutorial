@@ -5,9 +5,23 @@ fn main() {
 }
 
 fn app(cx: Scope) -> Element {
+    let mut count = use_state(cx, || 0);
+
     render! {
-        div {
-            "Hello, world!"
+        h1 { "Counter: {count}" }
+
+        button {
+            onclick: move |_| {
+                count += 1
+            },
+            "+"
+        }
+
+        button {
+            onclick: move |_| {
+                count -= 1
+            },
+            "-"
         }
     }
 }
