@@ -1,11 +1,9 @@
 use dioxus::prelude::*;
-use std::thread::Scope;
 
 fn main() {
-    launch(app);
+    dioxus_web::launch(app);
 }
 
-#[warn(deprecated)]
 fn app(cx: Scope) -> Element {
     render! {
         div {
