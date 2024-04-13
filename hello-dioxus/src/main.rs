@@ -5,7 +5,7 @@ fn main() {
 }
 
 fn app(cx: Scope) -> Element {
-    render! {
+    render {
         div {
             "Hello, world!"
         }
